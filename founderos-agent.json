@@ -1,0 +1,171 @@
+{
+  "schema": "founderos.agent-manifest/v1",
+  "id": "github:lucadeg/the-penniless-agent",
+  "name": "The Penniless Agent",
+  "entity_type": "agent",
+  "source_repo": "https://github.com/lucadeg/the-penniless-agent",
+  "source_revision": "main",
+  "objective": "Operate a zero-capital agent-commerce experiment spanning earn, hold and spend rails with verifiable evidence.",
+  "lifecycle": {
+    "autonomy_state": "external_observed_not_promoted",
+    "governance_state": "external_unadmitted",
+    "canonical_founderos_principal": false
+  },
+  "identity": {
+    "github_identity": true,
+    "cryptographic_identity": "EVM wallet / SIWX",
+    "wallet_posture": "receive-only by default"
+  },
+  "functions": [
+    {
+      "id": "discover_agent_native_work",
+      "description": "Discover and evaluate agent-native bounty and earning surfaces without classifying marketplace APIs as agents."
+    },
+    {
+      "id": "verify_payment_before_work",
+      "description": "Require verifiable payment or settlement evidence before fee-bearing or delivery-sensitive work."
+    },
+    {
+      "id": "earn_hold_spend_loop",
+      "description": "Coordinate earning rails, receive-only treasury posture and agent-compatible checkout as one governed economic loop."
+    },
+    {
+      "id": "verify_external_write",
+      "description": "Read back consequential external writes and treat delivery as persisted evidence rather than a successful HTTP status alone."
+    },
+    {
+      "id": "publish_agent_service",
+      "description": "Expose paid x402-compatible services with machine-readable discovery and payment requirements."
+    }
+  ],
+  "skills": [
+    {
+      "id": "safe-agent-commerce",
+      "name": "Safe Agent Commerce",
+      "type": "skill",
+      "source": "skills/safe-agent-commerce/SKILL.md",
+      "purpose": "Safety rules for agent earning, marketplaces, wallets and outward artifacts.",
+      "rule_groups": [
+        "payment evidence before work",
+        "on-chain marketplace audits",
+        "wallet discipline",
+        "fee and threshold arithmetic",
+        "key and reputation identity",
+        "outreach ethics",
+        "counterparty-grade output verification"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "earn.agent_bounties",
+      "kind": "business_capability",
+      "backing": [
+        "Superteam Agent API"
+      ]
+    },
+    {
+      "id": "earn.x402_services",
+      "kind": "business_capability",
+      "backing": [
+        "x402 paid endpoints"
+      ]
+    },
+    {
+      "id": "hold.usdc_base",
+      "kind": "business_capability",
+      "backing": [
+        "receive-only EVM wallet"
+      ]
+    },
+    {
+      "id": "spend.agent_checkout",
+      "kind": "business_capability",
+      "backing": [
+        "Bitrefill agent skills",
+        "x402",
+        "SIWX"
+      ]
+    },
+    {
+      "id": "identity.siwx",
+      "kind": "identity_capability",
+      "backing": [
+        "EIP-4361 / Sign-In-With-X"
+      ]
+    },
+    {
+      "id": "discovery.x402",
+      "kind": "discovery_capability",
+      "backing": [
+        "x402scan",
+        "402index"
+      ]
+    },
+    {
+      "id": "persistence.scheduled_watch",
+      "kind": "operations_capability",
+      "backing": [
+        "GitHub Actions cron"
+      ]
+    },
+    {
+      "id": "service.keyless_hosting",
+      "kind": "operations_capability",
+      "backing": [
+        "Deno Deploy"
+      ]
+    }
+  ],
+  "tools_services_rails": [
+    {
+      "name": "Superteam Agent API",
+      "type": "service_provider"
+    },
+    {
+      "name": "x402",
+      "type": "service_provider"
+    },
+    {
+      "name": "SIWX",
+      "type": "protocol"
+    },
+    {
+      "name": "Bitrefill agent skills",
+      "type": "skill_provider"
+    },
+    {
+      "name": "x402scan",
+      "type": "service_provider"
+    },
+    {
+      "name": "402index",
+      "type": "service_provider"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "automation"
+    },
+    {
+      "name": "Deno Deploy",
+      "type": "service_provider"
+    }
+  ],
+  "evidence": [
+    "README.md",
+    "skills/safe-agent-commerce/SKILL.md",
+    "FIELD-STUDY.md",
+    "LOG.md"
+  ],
+  "admission_requirements": [
+    "canonical Principal Authority identity",
+    "versioned agent definition/config digest",
+    "model routing policy",
+    "explicit tool/capability grants",
+    "memory policy",
+    "budget policy",
+    "eval suite",
+    "SLO",
+    "regression evidence before promotion"
+  ]
+}
